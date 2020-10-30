@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/Styles.css">
+    <title>Trailer Box</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div class='Side_Bar'>
+        <img src="Pictures/TrailerBox1.jpg" alt="picture">
+        <br>
+        <div class="text">
+            <p><a href="#First">Main Webpage</a></p>
+            <hr><br>
+            <p><a href="#Second">Global Chat</a></p>
+            <hr><br>
+            <p><a href="#Last">Contact Us</a></p>
+            <br><br><br><br><br>
+        </div>
+    </div>
+
+    <div id="Start" class="Start">
+        <h1> The Trailer Box</h1>
+    </div>
+
+    <div class="Main_part"></div>
+
+    <div id="First" class="First">
+        <h2> <u>The Main Website</u></h2>
+        <p>
+            The website provides trailer for any movie that is out in the market.
+            <br> The website also allows users to search for a particular movie.
+        </p>
+        <p>
+            Please sign in or sign up to continue on to the website.
+        </p>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:30%;">Sign Up</button>
+
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="php/sign_up.php" method="POST">
+                <div class="container">
+                    <h3>Sign Up</h3>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+
+                    <label for="user "><b>Username</b></label>
+                    <input type="text" placeholder="Username" name="user" required>
+
+                    <label for="name "><b>Name</b></label>
+                    <input type="text" placeholder="Name" name="name" required>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required id="tst" onfocusout="validatePassword()">
+
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required onfocusout="myFunction()" id="tst2">
+
+                    <div class="clearfix">
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:30%;">Sign In</button>
+
+        <div id="id02" class="modal">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="php/sign_in.php" method="POST">
+                <div class="container">
+                    <h3>Sign In</h3>
+                    <p>Please sign In</p>
+                    <hr>
+                    <label for="Username"><b>Username</b></label>
+                    <input type="text" placeholder="Username" name="user" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Password" name="psw" required>
+
+                    <div class="clearfix">
+                        <button type="submit" class="signupbtn">Sign In</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div class="Main_part"></div>
+    <div id="Second" class="First">
+        <h2> <u>The Chat Space</u></h2>
+        <h3>The place where you can chat with other</h3>
+        <p>
+            Click the button to get connected with the world.
+            <br> See what people are taking about.
+            <br> Take part in global discussion about the movie industry.
+        </p>
+        <a href="http://localhost:8080/">Super Chat</a>
+
+    </div>
+
+    <div class="Main_part"></div>
+    <div id="Last" class="Last">
+        <h2> <u>Contact Us</u></h2>
+        <p>
+            <h5>Email: Placeholder</h5>
+            <h5>Phone Number: Placeholder</h5>
+        </p>
+    </div>
+
+    <script>
+        var modal = document.getElementById('id01');
+        var mdl = document.getElementById('id02');
+        var psd = document.getElementById('tst');
+        var psd2 = document.getElementById('tst2');
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        window.onclick = function(event) {
+            if (event.target == mdl) {
+                mdl.style.display = "none";
+            }
+        }
+
+        function myFunction() {
+            if (psd.value != psd2.value) {
+                alert("The passwords arent same");
+                psd2.value = "";
+            }
+        }
+
+        function validatePassword() {
+
+            var pdw = document.getElementById('tst');
+            if (pdw.value.length < 6) {
+                alert("The Password showed be greater than 6 characters long");
+                pdw.value = "";
+            }
+            var matchedCase = new Array();
+            matchedCase.push("[$@$!%*#?&]");
+            matchedCase.push("[A-Z]");
+            matchedCase.push("[0-9]");
+            matchedCase.push("[a-z]");
+            var ctr = 0;
+            for (var i = 0; i < matchedCase.length; i++) {
+                if (new RegExp(matchedCase[i]).test(pdw.value)) {
+                    ctr++;
+                }
+            }
+            var color = "";
+            switch (ctr) {
+                case 0:
+                case 1:
+                case 2:
+                    color = "red";
+                    alert("The password showed contain atleast 1 UpperCase, 1 LowerCase, 1 Number , and 1 Special Character");
+                    pdw.value = "";
+                    break;
+                case 3:
+                    color = "orange";
+                    alert("The password showed contain atleast 1 UpperCase, 1 LowerCase, 1 Number , and 1 Special Character");
+                    pdw.value = "";
+                    break;
+                case 4:
+                    color = "green";
+                    break;
+            }
+            pdw.style.color = color;
+        }
+    </script>
+
+</body>
+
+</html>

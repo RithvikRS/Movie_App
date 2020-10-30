@@ -3,7 +3,7 @@
 $dbServername="localhost";
 $dbUsername="root";
 $dbPassword="";
-$dbName="iwp";
+$dbName="Trailer_Box";
 
 $conn=mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
 

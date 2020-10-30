@@ -1,4 +1,4 @@
-# Movie_App
+# Trailer Box
 
 <img src="https://img.shields.io/badge/Language-HTML, CSS, JS, PHP-brightgreen.svg" alt="made with HTML, CSS, JS, PHP">
 <img src="https://img.shields.io/badge/Database-MySQLi, Google Firestore-blue.svg" alt="made with MySQLi, Google Firestore-blue">

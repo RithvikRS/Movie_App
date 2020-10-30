@@ -1,0 +1,229 @@
+body,
+html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.Side_Bar {
+    background-color: rgb(248, 245, 245);
+    color: black;
+    float: left;
+    position: fixed;
+    height: auto;
+    width: 17%;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    padding: auto;
+}
+
+.Main_part {
+    background-image: url('../Pictures/lights-camera-action-2.jpg');
+    height: 50%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 83%;
+    float: right;
+}
+
+.Start {
+    height: auto;
+    background-image: url('../Pictures/lights-camera-action-2.jpg');
+    font-size: 60px;
+    height: 30%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 83%;
+    float: right;
+    border: 0;
+    padding: 0;
+    text-align: center;
+    color: #e8e8e8;
+}
+
+.First {
+    height: 60%;
+    font-size: 36px;
+    width: 80%;
+    float: right;
+    border: 0;
+    padding: 0;
+}
+
+.Last {
+    height: 30%;
+    font-size: 36px;
+    width: 80%;
+    float: right;
+    border: 0;
+    padding: 0;
+}
+
+a {
+    color: Black;
+    text-decoration: none;
+}
+
+.First a {
+    font: 20px Arial;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.Side_Bar img {
+    height: 30%;
+    width: 100%;
+}
+
+.text {
+    padding-top: 23%;
+    padding-left: 10%;
+    width: 80%;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 70%;
+    font-size: 170%;
+}
+
+.list-group-item {
+    margin: 3px;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+input[type=number]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #474e5d;
+    padding-top: 50px;
+    color: black;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+hr {
+    border: 1px solid black;
+    margin-bottom: 25px;
+}
+
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+label {
+    font-size: 25px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 300px) {
+    .signupbtn {
+        width: 100%;
+    }
+}

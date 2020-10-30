@@ -32,7 +32,7 @@ This App allows users to view trailers of movies. This app also allows users to 
 
 ### Main Website:
 
-1. Import the tables from the tables folder into mysqli
+1. Import the tables from the table folder into mysqli
 
 2. Get a api from TMDB and copy it to apiTransaction.js
 

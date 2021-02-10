@@ -9,7 +9,7 @@
 
 This App allows users to view trailers of movies. This app also allows users to participate in global chat.
 
-Chat: https://trailer-box.web.app/
+Chat: https://trailer-box.web.app/ (Website currently Down)
 
 ## Used Languages, frameworks, and database
 
